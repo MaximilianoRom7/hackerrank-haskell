@@ -13,6 +13,10 @@ Print the two values as space-separated integers on one line.
 
 -}
 
+powerset :: (Num a) => [a] -> [[a]]
+powerset [] = [[]]
+powerset (x:xs) = map (x:) (powerset xs) ++ powerset xs
+
 arrStrToArrArrInt :: [String] -> [[Int]]
 arrStrToArrArrInt xs = map (map read . words) xs
 
