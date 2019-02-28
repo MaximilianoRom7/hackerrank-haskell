@@ -1,6 +1,6 @@
 CC=ghc
 
-install: angry_professor apple_and_orange beautiful_days_at_the_movies between_two_sets birthday_chocolate bith_cake bon_appetit breaking_records cats_and_mouse circular_array_rotation counting_valleys day_of_the_programmer divisible_sum_pairs drawing_book electronic_shoping first grading_studients kangaroo migratory_birds MinMaxSum MinPlus picking_numbers save_the_prisoner sequence_equation sock_merchant Starcase the_hurdle_race time_conversion utopian_tree viral_advertising
+install: angry_professor apple_and_orange beautiful_days_at_the_movies between_two_sets birthday_chocolate bith_cake bon_appetit breaking_records cats_and_mouse circular_array_rotation counting_valleys day_of_the_programmer divisible_sum_pairs drawing_book electronic_shoping first forming_a_magic_squere grading_studients kangaroo migratory_birds MinMaxSum MinPlus picking_numbers save_the_prisoner sequence_equation sock_merchant Starcase the_hurdle_race time_conversion utopian_tree viral_advertising
 
 angry_professor: angry_professor.hs
 	$(CC) -o bin/angry_professor angry_professor.hs
@@ -49,6 +49,9 @@ electronic_shoping: electronic_shoping.hs
 
 first: first.hs
 	$(CC) -o bin/first first.hs
+
+forming_a_magic_squere: forming_a_magic_squere.hs
+	$(CC) -o bin/forming_a_magic_squere forming_a_magic_squere.hs
 
 grading_studients: grading_studients.hs
 	$(CC) -o bin/grading_studients grading_studients.hs

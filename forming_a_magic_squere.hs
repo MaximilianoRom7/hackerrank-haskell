@@ -30,7 +30,7 @@ squareDistance :: Square -> Square -> Int
 squareDistance s1 s2 = sum $ zipWith (-) (concat s1) (concat s2)
 
 solve :: Square -> Int
-solve sq = minimum $ map (distance sq) allMagic
+solve sq = minimum $ map (squareDistance sq) allMagic
 
 main :: IO ()
 main = interact $ show . solve . map (map read . words) . lines
