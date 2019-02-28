@@ -1,6 +1,8 @@
 # hackerrank-haskell
 hackerrank problem solutions written in haskell
 
+the name of each .hs file corresponds with the title of each problem I solved in hackerrank so far.
+
 How to compile:
 
 ```
