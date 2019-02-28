@@ -1,11 +1,22 @@
 # hackerrank-haskell
 hackerrank problem solutions written in haskell
 
-How to compile the diferent .hs files:
+How to compile:
 
-mkdir bin
-make
+```
+mkdir bin && make install
+```
 
 make will create a binary file in the directory bin for each .hs file
+
+if you add a new .hs file in this directory and you want to compone just run the bash script ./makefile.sh
+this will generate a Makefile.gen, just override the Makefile with:
+
+```
+./makefile.sh
+mv Makefile.gen Makefile
+make install
+```
+
 
 enjoy... :)
