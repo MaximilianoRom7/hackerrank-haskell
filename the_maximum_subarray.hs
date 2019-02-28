@@ -19,8 +19,8 @@ solve xs = result
     tests = filter (\l -> length l > 1) xs
     result = ""
 
-toIntArray :: [String] -> [[Int]]
-toIntArray xs = map (map read . words) xs
+arrStrToArrArrInt :: [String] -> [[Int]]
+arrStrToArrArrInt xs = map (map read . words) xs
 
 main :: IO ()
-main = interact $ solve . toIntArray . lines
+main = interact $ solve . arrStrToArrArrInt . lines
