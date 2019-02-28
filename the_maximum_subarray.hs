@@ -13,8 +13,14 @@ Print the two values as space-separated integers on one line.
 
 -}
 
-solve :: [Int] -> String
-solve xs = ""
+solve :: [[Int]] -> String
+solve xs = result
+  where
+    tests = filter (\l -> length l > 1) xs
+    result = ""
+
+toIntArray :: [String] -> [[Int]]
+toIntArray xs = map (map read . words) xs
 
 main :: IO ()
-main = interact $ solve . map read . words
+main = interact $ solve . toIntArray . lines
