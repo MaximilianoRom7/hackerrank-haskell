@@ -13,14 +13,20 @@ Print the two values as space-separated integers on one line.
 
 -}
 
-solve :: [[Int]] -> String
-solve xs = result
-  where
-    tests = filter (\l -> length l > 1) xs
-    result = ""
-
 arrStrToArrArrInt :: [String] -> [[Int]]
 arrStrToArrArrInt xs = map (map read . words) xs
 
+maxSumSubArr :: [[Int]] -> [[Int]]
+maxSumSubArr xs = result
+  where
+    tests = filter (\l -> length l > 1) xs
+    result = []
+
+solve :: String -> String
+solve input = unlines $ map (unwords . map show) maxSum
+  where
+    inputInts = arrStrToArrArrInt $ lines input
+    maxSum = maxSumSubArr inputInts
+
 main :: IO ()
-main = interact $ solve . arrStrToArrArrInt . lines
+main = interact $ solve
