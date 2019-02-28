@@ -12,3 +12,9 @@ all nonempty subsequences.
 Print the two values as space-separated integers on one line.
 
 -}
+
+solve :: [Int] -> String
+solve xs = ""
+
+main :: IO ()
+main = interact $ solve . map read . words
